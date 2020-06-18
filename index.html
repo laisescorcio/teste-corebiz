@@ -7,19 +7,26 @@
 
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito&:wght@400;500;600;900&display=swap"
       rel="stylesheet"
-      />
-
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
-      />
-
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
       rel="stylesheet"
-      />
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -31,7 +38,7 @@
             class="logo"
             src="./assets/site-logo-corebiz-preto-cinza.svg"
             alt="Logo Corebiz"
-            />
+          />
           <div class="account">
             <img src="./assets/user 1.svg" alt="Ícone Minha Conta" />
             <p>Minha Conta</p>
@@ -55,88 +62,101 @@
             Criar ou migrar seu e-commerce?
           </p>
         </div>
-        <img
-          class="header-banner--secondary"
-          src="./assets/Banner1.png"
-          alt="Imagem Banner Preta"
-          />
-        <div class="header-banner--principal"></div>
+        <div class="header-banner-images">
+          <div class="header-banner-images--secondary"></div>
+          <div class="header-banner-images--principal"></div>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="best-sellers">
         <h2>Mais Vendidos</h2>
-        <!-- PRODUTO 1 -->
-        <div class="product">
-          <img src="./assets/image 31.png" />
-          <p class="product-title">
-            Sapato Floater Preto
-          </p>
-          <div class="product-rating"></div>
-          <p class="product-sold"></p>
-          <p class="product-price">
-            por R$ 259,90
-          </p>
-          <p class="product-price-installment">
-            ou em 9x de R$ 28,87
-          </p>
-          <button class="product-buy">
-            Comprar
-          </button>
-        </div>
-        <!-- PRODUTO 2 -->
-        <div class="product">
-          <img src="./assets/image 32.png" />
-          <p class="product-title">
-            Sandália Linho Brown
-          </p>
-          <div class="product-rating"></div>
-          <p class="product-sold">
-            de R$299,90
-          </p>
-          <p class="product-price">
-            por R$ 199,90
-          </p>
-          <p class="product-price-installment">
-            ou em 4x de R$ 49,75
-          </p>
-          <button class="product-buy">
-            Comprar
-          </button>
-        </div>
-        <!-- PRODUTO 3 -->
-        <div class="product">
-          <img src="./assets/image 33.png" />
-          <p class="product-title">
-            Bota Mustang Preto
-          </p>
-          <div class="product-rating"></div>
-          <p class="product-sold">de R$329, 90</p>
-          <p class="product-price">
-            por R$ 299,90
-          </p>
-          <p class="product-price-installment">
-            ou em 10x de R$ 29,90
-          </p>
-          <button class="product-buy">
-            Comprar
-          </button>
-        </div>
-        <!-- PRODUTO 4 -->
-        <div class="product">
-          <img src="./assets/image 34.png" />
-          <p class="product-title">
-            Cinto Semicouro Preto 40mm
-          </p>
-          <div class="product-rating"></div>
-          <p class="product-price">
-            por R$ 79,90
-          </p>
-          <p class="product-price-installment"></p>
-          <button class="product-buy">
-            Comprar
-          </button>
+        <div class="best-sellers-carousel">
+          <!-- PRODUTO 1 -->
+          <div class="product">
+            <img src="./assets/image 31.png" />
+            <!-- <div class="product-flag">
+              <p>off</p>
+            </div> -->
+            <p class="product-title">
+              Sapato Floater Preto
+            </p>
+            <div class="product-rating"></div>
+            <p class="product-sold"></p>
+            <p class="product-price">
+              por R$ 259,90
+            </p>
+            <p class="product-price-installment">
+              ou em 9x de R$ 28,87
+            </p>
+            <button class="product-buy">
+              Comprar
+            </button>
+          </div>
+          <!-- PRODUTO 2 -->
+          <div class="product">
+            <img src="./assets/image 32.png" />
+            <div class="product-flag">
+              <p>off</p>
+            </div>
+            <p class="product-title">
+              Sandália Linho Brown
+            </p>
+            <div class="product-rating"></div>
+            <p class="product-sold">
+              de R$299,90
+            </p>
+            <p class="product-price">
+              por R$ 199,90
+            </p>
+            <p class="product-price-installment">
+              ou em 4x de R$ 49,75
+            </p>
+            <button class="product-buy">
+              Comprar
+            </button>
+          </div>
+          <!-- PRODUTO 3 -->
+          <div class="product">
+            <img src="./assets/image 33.png" />
+            <div class="product-flag">
+              <p>off</p>
+            </div>
+            <p class="product-title">
+              Bota Mustang Preto
+            </p>
+            <div class="product-rating"></div>
+            <p class="product-sold">de R$329, 90</p>
+            <p class="product-price">
+              por R$ 299,90
+            </p>
+            <p class="product-price-installment">
+              ou em 10x de R$ 29,90
+            </p>
+            <button class="product-buy">
+              Comprar
+            </button>
+          </div>
+          <!-- PRODUTO 4 -->
+          <div class="product">
+            <img src="./assets/image 34.png" />
+            <!-- <div class="product-flag">
+              <p>off</p>
+            </div> -->
+            <p class="product-title">
+              Cinto Semicouro Preto 40mm
+            </p>
+            <div class="product-rating"></div>
+            <p class="product-sold"></p>
+            <p class="product-price">
+              por R$ 79,90
+            </p>
+            <p class="product-price-installment"></p>
+            <button class="product-buy">
+              Comprar
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -166,9 +186,11 @@
           <br />
           Franca SP, Brasil
           <br />
-          contato@clickqi.com.br
+          <a href="mailto:contato@clickqi.com.br">
+            contato@clickqi.com.br
+          </a>
           <br />
-          <a class="" href=https://wa.me/551637136985>
+          <a href="https://wa.me/551637136985">
             +55 16 3713-6985
           </a>
         </p>
@@ -186,16 +208,32 @@
       <div class="footer-developers">
         <div class="footer-developers-corebiz">
           <p>Created by</p>
-          <a href="https://www.corebiz.ag/"><img
-              src="./assets/site-logo-footer.png" /></a>
+          <a href="https://www.corebiz.ag/"
+            ><img src="./assets/site-logo-footer.png"
+          /></a>
         </div>
         <div class="footer-developers-vtex">
           <p>Powered by</p>
-          <a href="https://vtex.com"><img src="./assets/Vector.svg" /></a>
+          <a href="https://vtex.com"><img src="./assets/Vectorvtex.png" /></a>
         </div>
-
-
       </div>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-migrate-3.3.0.js"
+      integrity="sha256-LHirvf0Kdg641fjejw4QdlIPPYKtSqHoDUpUUeTnHMs="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js
+  "></script>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

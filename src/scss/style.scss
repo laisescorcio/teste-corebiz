@@ -117,32 +117,52 @@ body {
           font-style: normal;
           font-weight: bold;
           font-size: 27px;
-          width: 277px;
+          width: 100%;
           line-height: 25px;
         }
       }
 
-      &--secondary {
-        display: none;
-      }
+      &-images {
+        // margin-bottom: 0 !important;
+        // .slick-dots {
+        //   top: 160px;
 
-      &--principal {
-        background-image: url("../../assets/image_2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 70%;
-        width: 100%;
-        height: 100%;
+        //   li button:before {
+        //     color: #fff;
+        //   }
+        // }
+
+        &--secondary {
+          display: none;
+          background-image: url("../../assets/Banner1.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 70%;
+          width: 320px;
+          height: 191px;
+        }
+
+        &--principal {
+          background-image: url("../../assets/image_2.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 70%;
+          width: 100%;
+          height: 191px;
+        }
       }
     }
   }
 
   main {
-    padding: 16px 20px;
+    padding: 16px 12px;
 
     .best-sellers {
       margin-bottom: 50px;
+
       h2 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 900;
         font-size: 18px;
         margin-bottom: 24px;
 
@@ -156,15 +176,61 @@ body {
         }
       }
 
+      &-carousel {
+        .slick-list {
+          height: 265px !important;
+          .slick-track {
+            .slick-slide {
+              width: 140px !important;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .slick-dots {
+          li {
+            margin: 0 -3px;
+          }
+          .slick-active button:before {
+            color: #f8475f;
+          }
+        }
+      }
+
       .product {
-        width: 155px;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        display: flex !important;
         align-items: center;
+        flex-direction: column;
+        // Para posicionar a flag promocional
+        position: relative;
 
         img {
-          width: 100%;
+          width: 132px;
           cursor: pointer;
+        }
+
+        &-flag {
+          width: 0;
+          height: 0;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-bottom: 30px solid #f8475f;
+          transform: rotate(45deg);
+          position: absolute;
+          right: -15px;
+          top: -4px;
+
+          p {
+            font-size: 10px;
+            font-family: "Nunito", sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            transform: rotate(-45deg);
+            position: absolute;
+            right: -10px;
+            top: 12px;
+          }
         }
 
         &-title {
@@ -178,20 +244,28 @@ body {
         }
 
         &-sold {
+          display: flex;
+          justify-content: center;
+          height: 15px;
           font-size: 11px;
           color: #7a7a7a;
           line-height: 15px;
           text-decoration-line: line-through;
-          margin-bottom: 1px;
         }
 
         &-price {
+          height: 15px;
+          display: flex;
+          justify-content: center;
           font-size: 16px;
           font-weight: bold;
           line-height: 22px;
           margin-bottom: 3px;
 
           &-installment {
+            height: 15px;
+            display: flex;
+            justify-content: center;
             font-size: 11px;
             line-height: 15px;
             color: #7a7a7a;
@@ -262,7 +336,7 @@ body {
   }
 
   footer {
-    padding: 16px 20px;
+    padding: 25px 20px;
     background-color: #000;
     width: 100%;
     height: 386px;
@@ -272,7 +346,7 @@ body {
     .footer-local {
       h2 {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         font-family: "Nunito", sans-serif;
 
         &::after {
@@ -281,20 +355,25 @@ body {
           height: 4px;
           background-color: #fff;
           display: block;
-          margin-top: 15px;
-        }
-
-        a {
-          color: #fff;
-          text-transform: none;
+          margin-top: 10px;
         }
       }
 
       p {
         font-size: 13px;
-        line-height: 25px;
-        margin-top: 15px;
+        line-height: 24px;
+        margin-top: 11px;
         font-family: "Nunito", sans-serif;
+      }
+
+      a {
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -335,7 +414,76 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 24px 30px;
+      padding: 24px 30px 5px 30px;
+    }
+  }
+}
+
+// para tela de 380 pixels
+@media (min-width: 380px) {
+  body {
+    main {
+      .best-sellers-carousel {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              width: 169px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// para tela de 420 pixels
+@media (min-width: 420px) {
+  body {
+    header {
+      .header-banner {
+        &-text {
+          padding: 0 30px;
+        }
+      }
+    }
+
+    main {
+      .best-sellers-carousel {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              width: 188.5px !important;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      .footer-contact {
+        padding: 0 70px;
+      }
+    }
+  }
+}
+
+// para tela de 768 pixels
+@media (min-width: 768px) {
+  body {
+    main {
+      .best-sellers-carousel {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              width: 362.5px !important;
+            }
+          }
+        }
+
+        .slick-dots {
+          bottom: -35px;
+        }
+      }
     }
   }
 }
