@@ -157,6 +157,10 @@ body main .best-sellers h2::after {
   margin-top: 5px;
 }
 
+body main .best-sellers-carousel .slick-arrow {
+  display: none;
+}
+
 body main .best-sellers-carousel .slick-list {
   height: 265px !important;
 }
@@ -401,10 +405,51 @@ body footer .footer-developers {
 }
 
 @media (min-width: 768px) {
+  body header .header-account {
+    padding: 0 90px;
+  }
+  body header .header-banner {
+    height: 300px;
+  }
+  body header .header-banner-text {
+    padding: 0 150px;
+  }
+  body header .header-banner-images--principal {
+    height: 300px;
+  }
+  body main .best-sellers-carousel .slick-arrow {
+    display: block;
+  }
+  body main .best-sellers-carousel .slick-arrow .slick-prev:before,
+  body main .best-sellers-carousel .slick-arrow .slick-next:before {
+    color: black;
+    width: 20px;
+    height: 20px;
+  }
   body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 362.5px !important;
+    width: 176px !important;
   }
   body main .best-sellers-carousel .slick-dots {
     bottom: -35px;
+  }
+  body footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 225px;
+  }
+  body footer .footer-contact {
+    padding: 0 50px;
+  }
+  body footer .footer-contact button {
+    width: 195px;
+  }
+  body footer .footer-developers {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  body footer .footer-developers-corebiz {
+    margin-right: 15px;
   }
 }

@@ -177,6 +177,9 @@ body {
       }
 
       &-carousel {
+        .slick-arrow {
+          display: none;
+        }
         .slick-list {
           height: 265px !important;
           .slick-track {
@@ -470,18 +473,65 @@ body {
 // para tela de 768 pixels
 @media (min-width: 768px) {
   body {
+    header {
+      .header-account {
+        padding: 0 90px;
+      }
+      .header-banner {
+        height: 300px;
+        &-text {
+          padding: 0 150px;
+        }
+        &-images--principal {
+          height: 300px;
+        }
+      }
+    }
     main {
       .best-sellers-carousel {
+        .slick-arrow {
+          display: block;
+
+          .slick-prev:before,
+          .slick-next:before {
+            color: black;
+            width: 20px;
+            height: 20px;
+          }
+        }
         .slick-list {
           .slick-track {
             .slick-slide {
-              width: 362.5px !important;
+              width: 176px !important;
             }
           }
         }
 
         .slick-dots {
           bottom: -35px;
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      height: 225px;
+      .footer-contact {
+        padding: 0 50px;
+        button {
+          width: 195px;
+        }
+      }
+
+      .footer-developers {
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        &-corebiz {
+          margin-right: 15px;
         }
       }
     }
