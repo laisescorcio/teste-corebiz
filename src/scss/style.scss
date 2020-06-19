@@ -30,10 +30,45 @@ body {
           height: 25px;
         }
 
-        .cart {
-          display: flex;
-          align-items: center;
-          cursor: pointer;
+        // Minha Conta e Meu Carrinho
+        &-login {
+          .account {
+            display: none;
+            align-items: center;
+            cursor: pointer;
+
+            p {
+              font-size: 13px;
+              line-height: 18px;
+              margin-left: 6px;
+              width: 74px;
+              height: 18px;
+              color: #7a7a7a;
+            }
+          }
+          .cart {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &-counter {
+              border-radius: 50%;
+              width: 14px;
+              background: #f8475f;
+              height: 14px;
+              margin-left: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &-number {
+                color: #fff;
+                font-size: 10px;
+                font-family: "Nunito", sans-serif;
+                font-weight: bold;
+              }
+            }
+          }
         }
       }
 
@@ -55,22 +90,6 @@ body {
           &:focus {
             outline: none;
           }
-        }
-      }
-
-      // Minha Conta e Meu Carrinho
-      .account {
-        display: none;
-        align-items: center;
-        cursor: pointer;
-
-        p {
-          font-size: 13px;
-          line-height: 18px;
-          margin-left: 6px;
-          width: 74px;
-          height: 18px;
-          color: #7a7a7a;
         }
       }
     }
@@ -430,7 +449,8 @@ body {
         .slick-list {
           .slick-track {
             .slick-slide {
-              width: 169px !important;
+              width: 140px !important;
+              margin-right: 45px;
             }
           }
         }
@@ -455,7 +475,8 @@ body {
         .slick-list {
           .slick-track {
             .slick-slide {
-              width: 188.5px !important;
+              width: 140px !important;
+              margin-right: 70px;
             }
           }
         }
@@ -475,7 +496,30 @@ body {
   body {
     header {
       .header-account {
-        padding: 0 90px;
+        padding: 0 50px;
+
+        &-common {
+          .hamburguer-menu {
+            display: none;
+          }
+
+          .logo {
+            width: 170px;
+            height: 41px;
+          }
+
+          &-login {
+            display: flex;
+            .account {
+              display: flex;
+              margin-right: 21px;
+            }
+          }
+        }
+
+        .search {
+          position: absolute;
+        }
       }
       .header-banner {
         height: 300px;
@@ -502,7 +546,8 @@ body {
         .slick-list {
           .slick-track {
             .slick-slide {
-              width: 176px !important;
+              width: 140px !important;
+              margin-right: 50px;
             }
           }
         }
@@ -513,11 +558,39 @@ body {
       }
     }
 
+    .newsletter {
+      height: 146px;
+
+      p {
+        display: flex;
+        justify-content: center;
+      }
+
+      &-register {
+        display: flex;
+        margin-top: 16px;
+
+        &-input {
+          display: flex;
+          input {
+            width: 280px;
+            margin-top: 0;
+            margin-right: 20px;
+          }
+        }
+
+        button {
+          width: 140px;
+          margin-top: 0;
+        }
+      }
+    }
+
     footer {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      height: 225px;
+      height: 213px;
       .footer-contact {
         padding: 0 50px;
         button {
@@ -531,7 +604,7 @@ body {
         padding: 0;
 
         &-corebiz {
-          margin-right: 15px;
+          margin-right: 30px;
         }
       }
     }

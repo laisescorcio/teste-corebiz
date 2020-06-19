@@ -32,10 +32,43 @@ body header .header-account-common .logo {
   height: 25px;
 }
 
-body header .header-account-common .cart {
+body header .header-account-common-login .account {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+body header .header-account-common-login .account p {
+  font-size: 13px;
+  line-height: 18px;
+  margin-left: 6px;
+  width: 74px;
+  height: 18px;
+  color: #7a7a7a;
+}
+
+body header .header-account-common-login .cart {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+body header .header-account-common-login .cart-counter {
+  border-radius: 50%;
+  width: 14px;
+  background: #f8475f;
+  height: 14px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .header-account-common-login .cart-counter-number {
+  color: #fff;
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
 }
 
 body header .header-account .search {
@@ -56,21 +89,6 @@ body header .header-account .search input {
 
 body header .header-account .search input:focus {
   outline: none;
-}
-
-body header .header-account .account {
-  display: none;
-  align-items: center;
-  cursor: pointer;
-}
-
-body header .header-account .account p {
-  font-size: 13px;
-  line-height: 18px;
-  margin-left: 6px;
-  width: 74px;
-  height: 18px;
-  color: #7a7a7a;
 }
 
 body header .header-banner {
@@ -388,7 +406,8 @@ body footer .footer-developers {
 
 @media (min-width: 380px) {
   body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 169px !important;
+    width: 140px !important;
+    margin-right: 45px;
   }
 }
 
@@ -397,7 +416,8 @@ body footer .footer-developers {
     padding: 0 30px;
   }
   body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 188.5px !important;
+    width: 140px !important;
+    margin-right: 70px;
   }
   body footer .footer-contact {
     padding: 0 70px;
@@ -406,7 +426,24 @@ body footer .footer-developers {
 
 @media (min-width: 768px) {
   body header .header-account {
-    padding: 0 90px;
+    padding: 0 50px;
+  }
+  body header .header-account-common .hamburguer-menu {
+    display: none;
+  }
+  body header .header-account-common .logo {
+    width: 170px;
+    height: 41px;
+  }
+  body header .header-account-common-login {
+    display: flex;
+  }
+  body header .header-account-common-login .account {
+    display: flex;
+    margin-right: 21px;
+  }
+  body header .header-account .search {
+    position: absolute;
   }
   body header .header-banner {
     height: 300px;
@@ -427,16 +464,40 @@ body footer .footer-developers {
     height: 20px;
   }
   body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 176px !important;
+    width: 140px !important;
+    margin-right: 50px;
   }
   body main .best-sellers-carousel .slick-dots {
     bottom: -35px;
+  }
+  body .newsletter {
+    height: 146px;
+  }
+  body .newsletter p {
+    display: flex;
+    justify-content: center;
+  }
+  body .newsletter-register {
+    display: flex;
+    margin-top: 16px;
+  }
+  body .newsletter-register-input {
+    display: flex;
+  }
+  body .newsletter-register-input input {
+    width: 280px;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+  body .newsletter-register button {
+    width: 140px;
+    margin-top: 0;
   }
   body footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 225px;
+    height: 213px;
   }
   body footer .footer-contact {
     padding: 0 50px;
@@ -450,6 +511,6 @@ body footer .footer-developers {
     padding: 0;
   }
   body footer .footer-developers-corebiz {
-    margin-right: 15px;
+    margin-right: 30px;
   }
 }
