@@ -100,7 +100,7 @@ body header .header-banner {
 body header .header-banner-text {
   color: #ffffff;
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   width: 100%;
   height: 100%;
   display: flex;
@@ -151,10 +151,6 @@ body header .header-banner-images--principal {
   height: 191px;
 }
 
-body main {
-  padding: 16px 12px;
-}
-
 body main .best-sellers {
   margin-bottom: 50px;
 }
@@ -163,7 +159,7 @@ body main .best-sellers h2 {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 18px;
-  margin-bottom: 24px;
+  margin: 16px 0 14px 13px;
 }
 
 body main .best-sellers h2::after {
@@ -175,37 +171,20 @@ body main .best-sellers h2::after {
   margin-top: 5px;
 }
 
-body main .best-sellers-carousel .slick-arrow {
-  display: none;
-}
-
-body main .best-sellers-carousel .slick-list {
-  height: 265px !important;
-}
-
-body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-  width: 140px !important;
-  margin-right: 10px;
-}
-
-body main .best-sellers-carousel .slick-dots li {
-  margin: 0 -3px;
-}
-
-body main .best-sellers-carousel .slick-dots .slick-active button:before {
-  color: #f8475f;
+body main .best-sellers .slick-slide {
+  margin: 0 13px;
 }
 
 body main .best-sellers .product {
   width: 100%;
   display: flex !important;
-  align-items: center;
   flex-direction: column;
+  max-width: 216px;
   position: relative;
 }
 
 body main .best-sellers .product img {
-  width: 132px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -217,7 +196,7 @@ body main .best-sellers .product-flag {
   border-bottom: 30px solid #f8475f;
   transform: rotate(45deg);
   position: absolute;
-  right: -15px;
+  right: -20px;
   top: -4px;
 }
 
@@ -404,21 +383,7 @@ body footer .footer-developers {
   padding: 24px 30px 5px 30px;
 }
 
-@media (min-width: 380px) {
-  body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 140px !important;
-    margin-right: 45px;
-  }
-}
-
 @media (min-width: 420px) {
-  body header .header-banner-text {
-    padding: 0 30px;
-  }
-  body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 140px !important;
-    margin-right: 70px;
-  }
   body footer .footer-contact {
     padding: 0 70px;
   }
@@ -426,7 +391,7 @@ body footer .footer-developers {
 
 @media (min-width: 768px) {
   body header .header-account {
-    padding: 0 50px;
+    padding: 0 30px;
   }
   body header .header-account-common .hamburguer-menu {
     display: none;
@@ -460,22 +425,6 @@ body footer .footer-developers {
     position: absolute;
     top: 0;
   }
-  body main .best-sellers-carousel .slick-arrow {
-    display: block;
-  }
-  body main .best-sellers-carousel .slick-arrow .slick-prev:before,
-  body main .best-sellers-carousel .slick-arrow .slick-next:before {
-    color: black;
-    width: 20px;
-    height: 20px;
-  }
-  body main .best-sellers-carousel .slick-list .slick-track .slick-slide {
-    width: 140px !important;
-    margin-right: 50px;
-  }
-  body main .best-sellers-carousel .slick-dots {
-    bottom: -35px;
-  }
   body .newsletter {
     height: 146px;
   }
@@ -485,6 +434,7 @@ body footer .footer-developers {
   }
   body .newsletter-register {
     display: flex;
+    justify-content: center;
     margin-top: 16px;
   }
   body .newsletter-register-input {
@@ -506,7 +456,7 @@ body footer .footer-developers {
     height: 213px;
   }
   body footer .footer-contact {
-    padding: 0 50px;
+    padding: 0 76px;
   }
   body footer .footer-contact button {
     width: 195px;
@@ -518,5 +468,69 @@ body footer .footer-developers {
   }
   body footer .footer-developers-corebiz {
     margin-right: 30px;
+  }
+}
+
+@media (min-width: 769px) {
+  body header .header-banner {
+    height: 350px;
+  }
+  body header .header-banner-text {
+    padding: 0 150px;
+    background-color: transparent;
+  }
+  body header .header-banner-images {
+    display: flex;
+    height: 100%;
+  }
+  body header .header-banner-images--secondary {
+    width: 100%;
+    height: 100%;
+    background-position: 100%;
+    background-size: cover;
+    z-index: 5;
+  }
+  body header .header-banner-images--principal {
+    height: 350px;
+    background-size: cover;
+    margin-left: -60px;
+    position: unset;
+    background-position: left;
+  }
+  body main {
+    padding: 16px 100px;
+  }
+  body main .best-sellers h2 {
+    padding-left: 0px;
+  }
+  body main .best-sellers .slick-prev:before,
+  body main .best-sellers .slick-next:before {
+    color: #000;
+  }
+  body main .best-sellers .slick-prev:before {
+    content: url("../../assets/Vectorarrow.svg");
+  }
+  body main .best-sellers .slick-next:before {
+    content: url("../../assets/Vectorarrow.svg");
+    transform: rotate(180deg);
+    display: block;
+  }
+  body footer .footer-contact {
+    padding: 0 92px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body footer .footer-contact {
+    padding: 0 145px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body header .header-account {
+    padding: 0 95px;
+  }
+  body header .header-account .search {
+    width: 660px;
   }
 }
