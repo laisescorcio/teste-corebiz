@@ -142,15 +142,6 @@ body {
       }
 
       &-images {
-        // margin-bottom: 0 !important;
-        // .slick-dots {
-        //   top: 160px;
-
-        //   li button:before {
-        //     color: #fff;
-        //   }
-        // }
-
         &--secondary {
           display: none;
           background-image: url("../../assets/Banner1.png");
@@ -522,12 +513,20 @@ body {
         }
       }
       .header-banner {
-        height: 300px;
+        height: 350px;
         &-text {
           padding: 0 150px;
+          background-color: transparent;
         }
-        &-images--principal {
-          height: 300px;
+        &-images {
+          &--secondary {
+            display: block;
+          }
+          &--principal {
+            height: 350px;
+            position: absolute;
+            top: 0;
+          }
         }
       }
     }
