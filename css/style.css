@@ -7,6 +7,14 @@
   font-family: "Nunito", sans-serif;
 }
 
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
 body {
   width: 100%;
 }
@@ -91,13 +99,13 @@ body header .header-account .search input:focus {
   outline: none;
 }
 
-body header .header-banner {
+body main .header-banner {
   position: relative;
   height: 191px;
   cursor: pointer;
 }
 
-body header .header-banner-text {
+body main .header-banner-text {
   color: #ffffff;
   position: absolute;
   z-index: 10;
@@ -106,8 +114,6 @@ body header .header-banner-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 0px;
-  top: 0;
   padding: 0 20px;
   font-family: "Nunito", sans-serif;
   font-style: normal;
@@ -115,7 +121,7 @@ body header .header-banner-text {
   background: rgba(0, 0, 0, 0.55);
 }
 
-body header .header-banner-text--secondary {
+body main .header-banner-text--secondary {
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
@@ -123,7 +129,7 @@ body header .header-banner-text--secondary {
   letter-spacing: 0.3px;
 }
 
-body header .header-banner-text--principal {
+body main .header-banner-text--principal {
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -132,7 +138,7 @@ body header .header-banner-text--principal {
   line-height: 25px;
 }
 
-body header .header-banner-images--secondary {
+body main .header-banner-images--secondary {
   display: none;
   background-image: url("../../assets/Banner1.png");
   background-size: cover;
@@ -142,7 +148,7 @@ body header .header-banner-images--secondary {
   height: 191px;
 }
 
-body header .header-banner-images--principal {
+body main .header-banner-images--principal {
   background-image: url("../../assets/image_2.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -173,6 +179,15 @@ body main .best-sellers h2::after {
 
 body main .best-sellers .slick-slide {
   margin: 0 13px;
+}
+
+body main .best-sellers .slick-dots {
+  position: unset;
+  margin-top: 20px;
+}
+
+body main .best-sellers .slick-dots .slick-active button:before {
+  color: #f8475f;
 }
 
 body main .best-sellers .product {
@@ -270,7 +285,7 @@ body .newsletter {
   font-family: "Lato";
   font-weight: bold;
   font-size: 22px;
-  height: 276px;
+  height: 100%;
   width: 100%;
   background-color: #f2f2f2;
 }
@@ -293,6 +308,20 @@ body .newsletter-register-input input {
   line-height: 14px;
 }
 
+body .newsletter-register-input span {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: "Lato", sans-serif;
+  color: #d7182a;
+  margin-top: 8px;
+}
+
+body .newsletter-register-input .newsletter-email,
+body .newsletter-register-input .newsletter-name {
+  display: flex;
+  flex-direction: column;
+}
+
 body .newsletter-register button {
   cursor: pointer;
   background-color: #000;
@@ -304,6 +333,11 @@ body .newsletter-register button {
   font-weight: bold;
   font-family: "Lato", sans-serif;
   margin-top: 7px;
+}
+
+body .newsletter-register button:hover {
+  background-color: #333333;
+  transition: 0.3s;
 }
 
 body footer {
@@ -347,10 +381,6 @@ body footer .footer-local a:hover {
   text-decoration: underline;
 }
 
-body footer .footer-contact {
-  padding: 0 50px;
-}
-
 body footer .footer-contact button {
   cursor: pointer;
   font-weight: 600;
@@ -361,7 +391,8 @@ body footer .footer-contact button {
   padding: 0 5px;
   width: 100%;
   height: 38px;
-  margin-top: 26px;
+  max-width: 200px;
+  margin: 26px auto 0;
   border-radius: 5px;
   border: 0;
   background-color: #fff;
@@ -381,12 +412,6 @@ body footer .footer-developers {
   flex-direction: row;
   justify-content: space-between;
   padding: 24px 30px 5px 30px;
-}
-
-@media (min-width: 420px) {
-  body footer .footer-contact {
-    padding: 0 70px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -410,17 +435,16 @@ body footer .footer-developers {
   body header .header-account .search {
     position: absolute;
   }
-  body header .header-banner {
+  body main .header-banner {
     height: 350px;
   }
-  body header .header-banner-text {
-    padding: 0 150px;
+  body main .header-banner-text {
     background-color: transparent;
   }
-  body header .header-banner-images--secondary {
+  body main .header-banner-images--secondary {
     display: block;
   }
-  body header .header-banner-images--principal {
+  body main .header-banner-images--principal {
     height: 350px;
     position: absolute;
     top: 0;
@@ -455,9 +479,6 @@ body footer .footer-developers {
     justify-content: center;
     height: 213px;
   }
-  body footer .footer-contact {
-    padding: 0 76px;
-  }
   body footer .footer-contact button {
     width: 195px;
   }
@@ -472,33 +493,41 @@ body footer .footer-developers {
 }
 
 @media (min-width: 769px) {
-  body header .header-banner {
-    height: 350px;
+  body .container {
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
   }
-  body header .header-banner-text {
-    padding: 0 150px;
+  body main .header-banner {
+    height: 350px;
+    position: relative;
+  }
+  body main .header-banner-text {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     background-color: transparent;
   }
-  body header .header-banner-images {
+  body main .header-banner-images {
     display: flex;
     height: 100%;
   }
-  body header .header-banner-images--secondary {
+  body main .header-banner-images--secondary {
     width: 100%;
     height: 100%;
     background-position: 100%;
     background-size: cover;
     z-index: 5;
   }
-  body header .header-banner-images--principal {
+  body main .header-banner-images--principal {
     height: 350px;
     background-size: cover;
     margin-left: -60px;
     position: unset;
     background-position: left;
-  }
-  body main {
-    padding: 16px 100px;
   }
   body main .best-sellers h2 {
     padding-left: 0px;
@@ -515,22 +544,48 @@ body footer .footer-developers {
     transform: rotate(180deg);
     display: block;
   }
-  body footer .footer-contact {
-    padding: 0 92px;
+  body footer div .footer-wrap {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 800px) {
+  .container-header {
+    max-width: 725px;
   }
 }
 
 @media (min-width: 1024px) {
-  body footer .footer-contact {
-    padding: 0 145px;
+  body .container-header {
+    max-width: 925px;
+  }
+  body .container {
+    max-width: 900px;
   }
 }
 
 @media (min-width: 1280px) {
+  body .container-header {
+    max-width: 1125px;
+  }
+  body .container {
+    max-width: 1100px;
+  }
   body header .header-account {
     padding: 0 95px;
   }
   body header .header-account .search {
     width: 660px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body .container-header {
+    max-width: 1225px;
+  }
+  body .container {
+    max-width: 1200px;
   }
 }

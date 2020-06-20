@@ -32,7 +32,7 @@
   <body>
     <header>
       <div class="header-account">
-        <div class="header-account-common">
+        <div class="header-account-common container-header">
           <img class="hamburguer-menu" src="./assets/Iconmenu.svg" />
           <img
             class="logo"
@@ -47,7 +47,7 @@
             <div class="cart">
               <img src="./assets/Vector.svg" alt="Ícone Meu Carrinho" />
               <div class="cart-counter">
-                <p class="cart-counter-number">1</p>
+                <p class="cart-counter-number">0</p>
               </div>
             </div>
           </div>
@@ -58,8 +58,12 @@
           <img src="./assets/magnifying-glass 1.svg" alt="Lupa de Pesquisa" />
         </div>
       </div>
-      <div class="header-banner">
-        <div class="header-banner-text">
+
+    </header>
+
+    <main>
+      <section class="header-banner">
+        <div class="header-banner-text container">
           <p class="header-banner-text--secondary">
             Olá, o que você está buscando?
           </p>
@@ -68,16 +72,15 @@
             <br>
             e-commerce?
           </p>
+
         </div>
         <div class="header-banner-images">
           <div class="header-banner-images--secondary"></div>
           <div class="header-banner-images--principal"></div>
         </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="best-sellers">
+      </section>
+      <section class="best-sellers container">
         <h2>Mais Vendidos</h2>
         <div class="best-sellers-carousel">
           <!-- PRODUTO 1 -->
@@ -166,19 +169,23 @@
           </div>
           <!-- PRODUTO 5 -->
           <div class="product">
-            <img src="./assets/image 34.png" />
-            <!-- <div class="product-flag">
+            <img src="./assets/image 32.png" />
+            <div class="product-flag">
               <p>off</p>
-            </div> -->
+            </div>
             <p class="product-title">
-              Cinto Semicouro Preto 40mm
+              Sandália Linho Brown
             </p>
             <div class="product-rating"></div>
-            <p class="product-sold"></p>
-            <p class="product-price">
-              por R$ 79,90
+            <p class="product-sold">
+              de R$299,90
             </p>
-            <p class="product-price-installment"></p>
+            <p class="product-price">
+              por R$ 199,90
+            </p>
+            <p class="product-price-installment">
+              ou em 4x de R$ 49,75
+            </p>
             <button class="product-buy">
               Comprar
             </button>
@@ -193,52 +200,68 @@
       </p>
       <div class="newsletter-register">
         <div class="newsletter-register-input">
-          <input placeholder="Digite seu nome" />
-          <input placeholder="Digite seu email" />
+          <div class="newsletter-name">
+            <input type="text" name="name" pattern="[a-z\s]+$"
+              id="newsletter-name-input"
+              placeholder="Digite seu nome" required />
+            <span class="newsletter-name-validation"></span>
+          </div>
+          <div class="newsletter-email">
+            <input type="text" name="email" id="newsletter-email-input"
+              placeholder="Digite seu email" required />
+            <span class="newsletter-email-validation"></span>
+          </div>
         </div>
-        <button>Eu quero!</button>
+        <button class="newsletter-submit">Eu quero!</button>
       </div>
     </section>
 
     <footer>
-      <div class="footer-local">
-        <h2>Localização</h2>
-        <p>
-          Rua Ifigênia Maria de Oliveira 3793
-          <br />
-          Jd. Piratininga - 14403-583
-          <br />
-          Franca SP, Brasil
-          <br />
-          <a href="mailto:contato@clickqi.com.br">
-            contato@clickqi.com.br
-          </a>
-          <br />
-          <a href="https://wa.me/551637136985">
-            +55 16 3713-6985
-          </a>
-        </p>
-      </div>
-      <div class="footer-contact">
-        <button class="contact-email">
-          <img src="./assets/iconemail.svg" />
-          <p>Entre em contato</p>
-        </button>
-        <button class="contact-online">
-          <img src="./assets/iconphone.svg" />
-          <p>Fale com o nosso consultor online</p>
-        </button>
-      </div>
-      <div class="footer-developers">
-        <div class="footer-developers-corebiz">
-          <p>Created by</p>
-          <a href="https://www.corebiz.ag/"><img
-              src="./assets/site-logo-footer.png"
-              /></a>
-        </div>
-        <div class="footer-developers-vtex">
-          <p>Powered by</p>
-          <a href="https://vtex.com"><img src="./assets/Vectorvtex.png" /></a>
+      <div class="container row">
+        <div class="footer-wrap">
+
+          <div class="footer-local">
+            <h2>Localização</h2>
+            <p>
+              Rua Ifigênia Maria de Oliveira 3793
+              <br />
+              Jd. Piratininga - 14403-583
+              <br />
+              Franca SP, Brasil
+              <br />
+              <a href="mailto:contato@clickqi.com.br">
+                contato@clickqi.com.br
+              </a>
+              <br />
+              <a href="https://wa.me/551637136985" target="_blank">
+                +55 16 3713-6985
+              </a>
+            </p>
+          </div>
+          <div class="footer-contact">
+            <button class="contact-email">
+              <img src="./assets/iconemail.svg" />
+              <p>Entre em contato</p>
+            </button>
+            <button class="contact-online">
+              <img src="./assets/iconphone.svg" />
+              <p>Fale com o nosso consultor online</p>
+            </button>
+          </div>
+          <div class="footer-developers">
+            <div class="footer-developers-corebiz">
+              <p>Created by</p>
+              <a href="https://www.corebiz.ag/" target="_blank"><img
+                  src="./assets/site-logo-footer.png"
+                  /></a>
+            </div>
+            <div class="footer-developers-vtex">
+              <p>Powered by</p>
+              <a href="https://vtex.com" target="_blank"><img
+                  src="./assets/Vectorvtex.png" /></a>
+            </div>
+          </div>
+
         </div>
       </div>
     </footer>
