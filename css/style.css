@@ -55,6 +55,10 @@ body header .header-account-common-login .account p {
   color: #7a7a7a;
 }
 
+body header .header-account-common-login .account:hover {
+  text-decoration: underline;
+}
+
 body header .header-account-common-login .cart {
   display: flex;
   align-items: center;
@@ -193,6 +197,7 @@ body main .best-sellers .slick-dots .slick-active button:before {
 body main .best-sellers .product {
   width: 100%;
   display: flex !important;
+  align-items: center;
   flex-direction: column;
   max-width: 216px;
   position: relative;
@@ -226,17 +231,28 @@ body main .best-sellers .product-flag p {
   top: 12px;
 }
 
-body main .best-sellers .product-title {
+body main .best-sellers .product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 14px;
+}
+
+body main .best-sellers .product-description-title {
   cursor: pointer;
-  width: 140px;
+  width: 100%;
+  height: 20px;
   text-transform: uppercase;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 10px;
   color: #7a7a7a;
   text-align: center;
   margin-bottom: 10px;
 }
 
-body main .best-sellers .product-sold {
+body main .best-sellers .product-description-sold {
   display: flex;
   justify-content: center;
   height: 15px;
@@ -246,8 +262,8 @@ body main .best-sellers .product-sold {
   text-decoration-line: line-through;
 }
 
-body main .best-sellers .product-price {
-  height: 15px;
+body main .best-sellers .product-description-price {
+  height: 18px;
   display: flex;
   justify-content: center;
   font-size: 16px;
@@ -256,7 +272,7 @@ body main .best-sellers .product-price {
   margin-bottom: 3px;
 }
 
-body main .best-sellers .product-price-installment {
+body main .best-sellers .product-description-price-installment {
   height: 15px;
   display: flex;
   justify-content: center;
@@ -266,7 +282,7 @@ body main .best-sellers .product-price-installment {
   margin-bottom: 4px;
 }
 
-body main .best-sellers .product-buy {
+body main .best-sellers .product-description-buy {
   cursor: pointer;
   width: 100%;
   height: 36px;
@@ -405,6 +421,16 @@ body footer .footer-contact button p {
   width: 120px;
 }
 
+body footer .footer-contact .contact-email:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+body footer .footer-contact .contact-online:hover {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
 body footer .footer-developers {
   font-size: 10px;
   font-family: "Nunito", sans-serif;
@@ -448,6 +474,21 @@ body footer .footer-developers {
     height: 350px;
     position: absolute;
     top: 0;
+  }
+  body main .best-sellers .product-description-title {
+    font-size: 12px;
+  }
+  body main .best-sellers .product-description-sold {
+    font-size: 12px;
+  }
+  body main .best-sellers .product-description-price {
+    font-size: 18px;
+  }
+  body main .best-sellers .product-description-price-installment {
+    font-size: 11px;
+  }
+  body main .best-sellers .product-description-buy {
+    font-size: 12px;
   }
   body .newsletter {
     height: 146px;
@@ -532,6 +573,9 @@ body footer .footer-developers {
   body main .best-sellers h2 {
     padding-left: 0px;
   }
+  body main .best-sellers h2:after {
+    width: 65px;
+  }
   body main .best-sellers .slick-prev:before,
   body main .best-sellers .slick-next:before {
     color: #000;
@@ -564,6 +608,30 @@ body footer .footer-developers {
   body .container {
     max-width: 900px;
   }
+  body header .header-account .search {
+    width: 460px;
+  }
+  body main .header-banner {
+    height: 400px;
+  }
+  body main .header-banner-images--principal {
+    height: 100%;
+    margin-left: -65px;
+  }
+  body main .best-sellers .product-description {
+    height: 153px;
+  }
+  body main .best-sellers .product-description-buy {
+    display: none;
+    max-width: 125px;
+  }
+  body main .best-sellers .product-description.active {
+    transition: 0.2s;
+    background-color: #e6e8ea;
+  }
+  body main .best-sellers .product-description.active .product-description-buy {
+    display: block;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -579,6 +647,13 @@ body footer .footer-developers {
   body header .header-account .search {
     width: 660px;
   }
+  body main .header-banner {
+    height: 430px;
+  }
+  body main .header-banner-images--principal {
+    height: 100%;
+    margin-left: -70px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -587,5 +662,14 @@ body footer .footer-developers {
   }
   body .container {
     max-width: 1200px;
+  }
+  body header .header-account .search {
+    width: 718px;
+  }
+}
+
+@media (min-width: 1680px) {
+  body main .header-banner-images--principal {
+    margin-left: -70px;
   }
 }

@@ -53,6 +53,10 @@ body {
               height: 18px;
               color: #7a7a7a;
             }
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
           .cart {
             display: flex;
@@ -205,6 +209,7 @@ body {
       .product {
         width: 100%;
         display: flex !important;
+        align-items: center;
         flex-direction: column;
         // Para posicionar a flag promocional
         max-width: 216px;
@@ -238,58 +243,68 @@ body {
           }
         }
 
-        &-title {
-          cursor: pointer;
-          width: 140px;
-          text-transform: uppercase;
-          font-size: 14px;
-          color: #7a7a7a;
-          text-align: center;
-          margin-bottom: 10px;
-        }
-
-        &-sold {
+        &-description {
           display: flex;
-          justify-content: center;
-          height: 15px;
-          font-size: 11px;
-          color: #7a7a7a;
-          line-height: 15px;
-          text-decoration-line: line-through;
-        }
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding-top: 7px;
+          padding-bottom: 14px;
+          &-title {
+            cursor: pointer;
+            width: 100%;
+            height: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 10px;
+            color: #7a7a7a;
+            text-align: center;
+            margin-bottom: 10px;
+          }
 
-        &-price {
-          height: 15px;
-          display: flex;
-          justify-content: center;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 22px;
-          margin-bottom: 3px;
-
-          &-installment {
-            height: 15px;
+          &-sold {
             display: flex;
             justify-content: center;
+            height: 15px;
             font-size: 11px;
-            line-height: 15px;
             color: #7a7a7a;
-            margin-bottom: 4px;
+            line-height: 15px;
+            text-decoration-line: line-through;
           }
-        }
 
-        &-buy {
-          cursor: pointer;
-          width: 100%;
-          height: 36px;
-          border-radius: 6px;
-          border: 0;
-          background: black;
-          text-transform: uppercase;
-          font-family: "Ubuntu", sans-serif;
-          font-weight: bold;
-          color: #fff;
-          letter-spacing: 1px;
+          &-price {
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 22px;
+            margin-bottom: 3px;
+
+            &-installment {
+              height: 15px;
+              display: flex;
+              justify-content: center;
+              font-size: 11px;
+              line-height: 15px;
+              color: #7a7a7a;
+              margin-bottom: 4px;
+            }
+          }
+
+          &-buy {
+            cursor: pointer;
+            width: 100%;
+            height: 36px;
+            border-radius: 6px;
+            border: 0;
+            background: black;
+            text-transform: uppercase;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+          }
         }
       }
     }
@@ -429,6 +444,20 @@ body {
           width: 120px;
         }
       }
+
+      .contact-email {
+        &:hover {
+          text-decoration: underline;
+          transition: 0.3s;
+        }
+      }
+
+      .contact-online {
+        &:hover {
+          text-decoration: underline;
+          transition: 0.3s;
+        }
+      }
     }
 
     .footer-developers {
@@ -438,19 +467,6 @@ body {
       flex-direction: row;
       justify-content: space-between;
       padding: 24px 30px 5px 30px;
-    }
-  }
-}
-
-// para tela de 380 pixels
-@media (min-width: 380px) {
-  body {
-    main {
-      .best-sellers {
-        .product {
-          // padding: 0 8px 0 0;
-        }
-      }
     }
   }
 }
@@ -514,6 +530,28 @@ body {
             height: 350px;
             position: absolute;
             top: 0;
+          }
+        }
+      }
+
+      .best-sellers {
+        .product {
+          &-description {
+            &-title {
+              font-size: 12px;
+            }
+            &-sold {
+              font-size: 12px;
+            }
+            &-price {
+              font-size: 18px;
+            }
+            &-price-installment {
+              font-size: 11px;
+            }
+            &-buy {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -616,6 +654,10 @@ body {
       .best-sellers {
         h2 {
           padding-left: 0px;
+
+          &:after {
+            width: 65px;
+          }
         }
 
         .slick-prev:before,
@@ -661,6 +703,46 @@ body {
     .container {
       max-width: 900px;
     }
+
+    header {
+      .header-account {
+        .search {
+          width: 460px;
+        }
+      }
+    }
+    main {
+      .header-banner {
+        height: 400px;
+        &-images {
+          &--principal {
+            height: 100%;
+            margin-left: -65px;
+          }
+        }
+      }
+
+      .best-sellers {
+        .product {
+          &-description {
+            height: 153px;
+            &-buy {
+              display: none;
+              max-width: 125px;
+            }
+
+            &.active {
+              transition: 0.2s;
+              background-color: #e6e8ea;
+
+              .product-description-buy {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -681,6 +763,17 @@ body {
         }
       }
     }
+    main {
+      .header-banner {
+        height: 430px;
+        &-images {
+          &--principal {
+            height: 100%;
+            margin-left: -70px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -691,6 +784,28 @@ body {
     }
     .container {
       max-width: 1200px;
+    }
+
+    header {
+      .header-account {
+        .search {
+          width: 718px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1680px) {
+  body {
+    main {
+      .header-banner {
+        &-images {
+          &--principal {
+            margin-left: -70px;
+          }
+        }
+      }
     }
   }
 }
