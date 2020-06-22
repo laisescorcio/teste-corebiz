@@ -156,7 +156,7 @@ body {
       &-images {
         &--secondary {
           display: none;
-          background-image: url("../../assets/Banner1.png");
+          background-image: url("../assets/Banner1.png");
           background-size: cover;
           background-repeat: no-repeat;
           background-position: 70%;
@@ -165,7 +165,7 @@ body {
         }
 
         &--principal {
-          background-image: url("../../assets/image_2.png");
+          background-image: url("../assets/image_2.png");
           background-size: cover;
           background-repeat: no-repeat;
           background-position: 70%;
@@ -666,10 +666,10 @@ body {
         }
 
         .slick-prev:before {
-          content: url("../../assets/Vectorarrow.svg");
+          content: url("../assets/Vectorarrow.svg");
         }
         .slick-next:before {
-          content: url("../../assets/Vectorarrow.svg");
+          content: url("../assets/Vectorarrow.svg");
           transform: rotate(180deg);
           display: block;
         }
