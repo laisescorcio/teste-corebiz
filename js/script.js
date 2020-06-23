@@ -141,7 +141,8 @@ var global = {
         data: JSON.stringify(body),
         dataType: "json",
         success: function (data) {
-          alert("Sucesso");
+          $(".newsletter").css("display", "none");
+          $(".newsletter-sent").css("display", "block");
         },
         error: function (request, error) {
           console.log(error);

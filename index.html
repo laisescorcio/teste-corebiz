@@ -88,25 +88,36 @@
       </section>
     </main>
 
-    <section class="newsletter">
-      <p>
-        Participe de nossas news com promoções e novidades!
-      </p>
-      <div class="newsletter-register">
-        <div class="newsletter-register-input">
-          <div class="newsletter-name">
-            <input type="text" name="name" pattern="[a-z\s]+$"
-              id="newsletter-name-input"
-              placeholder="Digite seu nome" required />
-            <span class="newsletter-name-validation"></span>
+    <section class="newsletter-info">
+      <div class="newsletter">
+        <p>
+          Participe de nossas news com promoções e novidades!
+        </p>
+        <div class="newsletter-register">
+          <div class="newsletter-register-input">
+            <div class="newsletter-name">
+              <input type="text" name="name" pattern="[a-z\s]+$"
+                id="newsletter-name-input"
+                placeholder="Digite seu nome" required />
+              <span class="newsletter-name-validation"></span>
+            </div>
+            <div class="newsletter-email">
+              <input type="text" name="email" id="newsletter-email-input"
+                placeholder="Digite seu email" required />
+              <span class="newsletter-email-validation"></span>
+            </div>
           </div>
-          <div class="newsletter-email">
-            <input type="text" name="email" id="newsletter-email-input"
-              placeholder="Digite seu email" required />
-            <span class="newsletter-email-validation"></span>
-          </div>
+          <button class="newsletter-submit">Eu quero!</button>
         </div>
-        <button class="newsletter-submit">Eu quero!</button>
+      </div>
+
+      <div class="newsletter-sent">
+        <div class="newsletter-sent-register">
+          <span>Seu e-mail foi cadastrado com
+            sucesso!</span>
+          <p> A partir de agora você receberá as novidades e ofertas exclusivas</p>
+          <button class="newsletter-sent-button">Cadastrar novo e-mail</button>
+        </div>
       </div>
     </section>
 

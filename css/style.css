@@ -89,6 +89,7 @@ body header .header-account .search {
   height: 23px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 body header .header-account .search input {
@@ -296,7 +297,7 @@ body main .best-sellers .product-description-buy {
   letter-spacing: 1px;
 }
 
-body .newsletter {
+body .newsletter-info .newsletter {
   padding: 16px 20px;
   font-family: "Lato";
   font-weight: bold;
@@ -306,11 +307,11 @@ body .newsletter {
   background-color: #f2f2f2;
 }
 
-body .newsletter p {
+body .newsletter-info .newsletter p {
   font-family: "Lato";
 }
 
-body .newsletter-register-input input {
+body .newsletter-info .newsletter-register-input input {
   width: 100%;
   height: 48px;
   border-radius: 5px;
@@ -324,7 +325,7 @@ body .newsletter-register-input input {
   line-height: 14px;
 }
 
-body .newsletter-register-input span {
+body .newsletter-info .newsletter-register-input span {
   font-size: 12px;
   line-height: 12px;
   font-family: "Lato", sans-serif;
@@ -332,13 +333,13 @@ body .newsletter-register-input span {
   margin-top: 8px;
 }
 
-body .newsletter-register-input .newsletter-email,
-body .newsletter-register-input .newsletter-name {
+body .newsletter-info .newsletter-register-input .newsletter-email,
+body .newsletter-info .newsletter-register-input .newsletter-name {
   display: flex;
   flex-direction: column;
 }
 
-body .newsletter-register button {
+body .newsletter-info .newsletter-register button {
   cursor: pointer;
   background-color: #000;
   border-radius: 5px;
@@ -351,7 +352,49 @@ body .newsletter-register button {
   margin-top: 7px;
 }
 
-body .newsletter-register button:hover {
+body .newsletter-info .newsletter-register button:hover {
+  background-color: #333333;
+  transition: 0.3s;
+}
+
+body .newsletter-info .newsletter-sent {
+  display: none;
+}
+
+body .newsletter-info .newsletter-sent-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background-color: #f2f2f2;
+  padding: 16px 20px;
+  height: 146px;
+  width: 100%;
+}
+
+body .newsletter-info .newsletter-sent-register span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+body .newsletter-info .newsletter-sent-register p {
+  font-size: 13px;
+}
+
+body .newsletter-info .newsletter-sent-register button {
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 5px;
+  border: 0;
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  margin-top: 15px;
+}
+
+body .newsletter-info .newsletter-sent-register button:hover {
   background-color: #333333;
   transition: 0.3s;
 }
@@ -490,29 +533,33 @@ body footer .footer-developers {
   body main .best-sellers .product-description-buy {
     font-size: 12px;
   }
-  body .newsletter {
+  body .newsletter-info .newsletter {
     height: 146px;
   }
-  body .newsletter p {
+  body .newsletter-info .newsletter p {
     display: flex;
     justify-content: center;
   }
-  body .newsletter-register {
+  body .newsletter-info .newsletter-register {
     display: flex;
     justify-content: center;
     margin-top: 16px;
   }
-  body .newsletter-register-input {
+  body .newsletter-info .newsletter-register-input {
     display: flex;
   }
-  body .newsletter-register-input input {
+  body .newsletter-info .newsletter-register-input input {
     width: 280px;
     margin-top: 0;
     margin-right: 20px;
   }
-  body .newsletter-register button {
+  body .newsletter-info .newsletter-register button {
     width: 140px;
     margin-top: 0;
+  }
+  body .newsletter-info .newsletter-sent-register button {
+    margin-top: 15px;
+    width: 328px;
   }
   body footer {
     display: flex;
@@ -520,15 +567,23 @@ body footer .footer-developers {
     justify-content: center;
     height: 213px;
   }
-  body footer .footer-contact button {
+  body footer .container {
+    width: 100%;
+  }
+  body footer .container .footer-wrap {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+  body footer .container .footer-contact button {
     width: 195px;
   }
-  body footer .footer-developers {
+  body footer .container .footer-developers {
     display: flex;
     align-items: center;
     padding: 0;
   }
-  body footer .footer-developers-corebiz {
+  body footer .container .footer-developers-corebiz {
     margin-right: 30px;
   }
 }
